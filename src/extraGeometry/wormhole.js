@@ -1,4 +1,4 @@
-import * as THREE from "three";
+import * as THREE from "../../node_modules/three/build/three.module.js";
 import { createMultiMaterialObject } from "three/examples/jsm/utils/SceneUtils.js";
 import { gsap } from "gsap";
 

@@ -1,6 +1,6 @@
 import "./style.css";
 
-import * as THREE from "three";
+import * as THREE from "../node_modules/three/build/three.module.js";
 import { generateStars } from "./extraGeometry/stars";
 import Ring from "./extraGeometry/ring";
 import TrippyBall from "./extraGeometry/trippyBall";
