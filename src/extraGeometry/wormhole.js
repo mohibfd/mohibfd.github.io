@@ -1,5 +1,5 @@
 import * as THREE from "../../node_modules/three/build/three.module.js";
-import { createMultiMaterialObject } from "../../node_modules/three/examples/jsm/utils/SceneUtils.js";
+
 import { gsap } from "../../node_modules/gsap/gsap-core.js";
 
 export default class Wormhole {
@@ -10,6 +10,16 @@ export default class Wormhole {
    }
 
    generate() {
+      function createMultiMaterialObject(geometry, materials) {
+         const group = new THREE.Group();
+
+         for (let i = 0, l = materials.length; i < l; i++) {
+            group.add(new THREE.Mesh(geometry, materials[i]));
+         }
+
+         return group;
+      }
+
       class CustomSinCurve extends THREE.Curve {
          constructor(scale = 1) {
             super();
