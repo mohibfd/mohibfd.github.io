@@ -1,6 +1,6 @@
 import * as THREE from "../../node_modules/three/build/three.module.js";
-import { createMultiMaterialObject } from "three/examples/jsm/utils/SceneUtils.js";
-import { gsap } from "gsap";
+import { createMultiMaterialObject } from "../../node_modules/three/examples/jsm/utils/SceneUtils.js";
+import { gsap } from "../../node_modules/gsap/gsap-core.js";
 
 export default class Wormhole {
    constructor(scene, library, parameters) {

@@ -1,14 +1,12 @@
-import "./style.css";
-
 import * as THREE from "../node_modules/three/build/three.module.js";
-import { generateStars } from "./extraGeometry/stars";
-import Ring from "./extraGeometry/ring";
-import TrippyBall from "./extraGeometry/trippyBall";
-import Wormhole from "./extraGeometry/wormhole";
-import ScrollAnimation from "./scrollAnimation";
-import Library from "./library";
-import Parameters from "./parameters";
-import Singularity from "./extraGeometry/singularity";
+import { generateStars } from "./extraGeometry/stars.js";
+import Ring from "./extraGeometry/ring.js";
+import TrippyBall from "./extraGeometry/trippyBall.js";
+import Wormhole from "./extraGeometry/wormhole.js";
+import ScrollAnimation from "./scrollAnimation.js";
+import Library from "./library.js";
+import Parameters from "./parameters.js";
+import Singularity from "./extraGeometry/singularity.js";
 
 const library = new Library();
 const parameters = new Parameters();
