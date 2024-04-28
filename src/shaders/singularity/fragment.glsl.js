@@ -1,3 +1,4 @@
+export default /* glsl */ `
 uniform vec3 uColor;
 uniform float uTime;
 uniform sampler2D uTexture;
@@ -218,3 +219,4 @@ void main()
     float fogFactor = smoothstep( fogNear, fogFar, depth );
     gl_FragColor.rgb = mix( gl_FragColor.rgb, fogColor, fogFactor );
 }
+`;

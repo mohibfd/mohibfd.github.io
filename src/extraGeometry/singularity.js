@@ -1,16 +1,8 @@
 import * as THREE from "../../node_modules/three/build/three.module.js";
 import { gsap } from "../../node_modules/gsap/gsap-core.js";
 
-const shader = {};
-
-async function getShaders() {
-   shader.vert = await fetch("../shaders/singularity/vertex.glsl").then((x) => x.text());
-   shader.frag = await fetch("../shaders/singularity/fragment.glsl").then((x) =>
-      x.text()
-   );
-}
-
-await getShaders();
+// import singularityBlackholeVertexShader from "../shaders/singularity/vertex.glsl";
+// import singularityBlackholeFragmentShader from "../shaders/singularity/fragment.glsl";
 
 export default class Singularity {
    constructor(scene, library, parameters) {
@@ -104,8 +96,8 @@ export default class Singularity {
    _getRandomBlackHoleShaderMaterial() {
       return new THREE.ShaderMaterial({
          precision: "lowp",
-         vertexShader: shader.vert,
-         fragmentShader: shader.frag,
+         //  vertexShader: singularityBlackholeVertexShader,
+         //  fragmentShader: singularityBlackholeFragmentShader,
          uniforms: {
             uTime: { value: 0 },
             uTexture: { value: this.library.textures.blackhole.disk[0] },
